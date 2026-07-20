@@ -16,14 +16,36 @@
     <div class="filters">
       <input type="date" id="startDate" />
       <input type="date" id="endDate" />
-      <button>Get Space Images</button>
+      <button type="button">Get Space Images</button>
     </div>
+
+    <section id="factSection" class="fact-section" aria-live="polite">
+      <h2>Did You Know?</h2>
+      <p id="spaceFact">Loading a fun space fact...</p>
+    </section>
 
     <div id="gallery" class="gallery">
       <div class="placeholder">
         <div class="placeholder-icon">🔭</div>
         <p>Select a date range and click "Get Space Images" to explore the cosmos!</p>
       </div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="modal-close" type="button" aria-label="Close">×</button>
+      <div id="modalMedia" class="modal-media">
+        <img id="modalImage" class="modal-image" src="" alt="" />
+        <div id="modalVideoMessage" class="modal-video-message hidden">
+          <div class="placeholder-icon">▶️</div>
+          <p>This APOD entry is a video. Open it directly to watch.</p>
+          <a id="modalVideoLink" class="modal-video-link" href="#" target="_blank" rel="noopener noreferrer">Open video</a>
+        </div>
+      </div>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDate" class="modal-date"></p>
+      <p id="modalExplanation" class="modal-explanation"></p>
     </div>
   </div>
 
